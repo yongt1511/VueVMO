@@ -1,5 +1,5 @@
 <template>
-  <footer class="container">
+  <footer class="">
     <div class="footerhomepage">
     <div class="col-md-12 footer__box-contact">
       <div class="container">
@@ -20,7 +20,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-3" style="width: 29%;">
+          <div class="col-md-3 col-sm-3 col-xs-3" >
             <div class="row">
               <ul class="list-unstyled m-0">
                 <li class="mb-4">
@@ -63,7 +63,7 @@
               </ul>
             </div>
           </div>
-          <div class="col-md-3 col-sm-3 col-xs-3" style="width: 21%;">
+          <div class="col-md-3 col-sm-3 col-xs-3" >
             <div class="row">
               <ul class="list-unstyled m-0">
                 <p class="font-16 mb-2"><strong>Quy định và khác:</strong></p>
