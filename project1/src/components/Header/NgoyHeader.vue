@@ -22,17 +22,38 @@
             <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownNavLink">
               <li>
                 <router-link
-                    to="/Product"
+                    to="/AllProduct"
                     tag="li"
                     class="nav-item"
                     active-class="active"
                     exact>
-                  <a class="dropdown-item " href="#" aria-current="page">Thịt - Thủy Sản - Trứng</a>
+                  <a class="dropdown-item " href="#" aria-current="page">Tất cả Sản phẩm</a>
                 </router-link>
               </li>
-              <li><a class="dropdown-item" href="#">Trứng - Rau củ</a></li>
-              <li><a class="dropdown-item" href="#">Đồ uống - Giải khát</a></li>
-              <li><a class="dropdown-item" href="#">Chăm sóc cá nhân</a></li>
+              <li> <router-link
+                      to="/MeatProduct"
+                      tag="li"
+                      class="nav-item"
+                      active-class="active"
+                      exact>
+                <a class="dropdown-item" href="#">Thịt - Thủy Sản - Trứng</a>
+              </router-link></li>
+              <li> <router-link
+                      to="/FruidProduct"
+                      tag="li"
+                      class="nav-item"
+                      active-class="active"
+                      exact>
+                <a class="dropdown-item" href="#">Hoa quả nhiệt đới</a>
+              </router-link></li>
+              <li> <router-link
+                      to="/DrinkProduct"
+                      tag="li"
+                      class="nav-item"
+                      active-class="active"
+                      exact>
+                <a class="dropdown-item" href="#">Đồ uống - Giải khát</a>
+              </router-link></li>
             </ul>
           </div>
           <a href="#"></a>

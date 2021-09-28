@@ -8,7 +8,7 @@
                         <div class="col-md-12 col-sm-12 col-xs-12 box-title__title">
                             <div class="row">
                                 <div class="text-reset text-decoration-none">
-                                    <h2><strong>Sản phẩm nổi bật nhất</strong></h2>
+                                    <h2><strong>{{titleFruidProduct}}</strong></h2>
                                 </div>
                             </div>
                         </div>
@@ -22,18 +22,37 @@
                                 <span class="fs-4">THƯƠNG HIỆU</span>
                             </a>
                             <hr>
-                            <ul class="nav nav-pills flex-column mb-auto" v-for="(brand) in dataBrand" :key="brand.id">
-                                <li class="nav-item" >
+                            <ul class="nav nav-pills flex-column mb-auto">
+                                <li class="nav-item">
                                     <a href="#" class="nav-link  link-dark" aria-current="page">
-                                        {{brand.name}}
+                                        MeatDeli
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        FEDDY
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        LENGER
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        VIMEX
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        SOVI
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9 product ">
                             <nav class="col-md-4 col-sm-4 col-xs-4"
-                                 v-for="(product) in dataProduct"
+                                 v-for="(product) in fruidProduct"
                                  :key="product.id"
                                  :id="product.id"
                                  @click="productOnclick(product.id)">
@@ -80,7 +99,7 @@
     import axios from "axios";
 
     export default {
-        name: "ListProduct",
+        name: "FruidProcut",
         components: {AppLayout},
         props: {
             listproduct: {
@@ -90,9 +109,8 @@
         data() {
 
             return {
-                dataBrand: [],
-                dataProduct: [],
-                id: this.$route.params.id,
+                fruidProduct: [],
+                titleFruidProduct:'',
             }
         },
         methods: {
@@ -100,33 +118,34 @@
                 this.$router.push({path: `/product/${id}`, params: {id: id}});
 
             },
-            GetBrand: function () {
+            GetCategory: function () {
                 return new Promise((resolve, reject) => {
-                    axios.get(' http://localhost:3000/brand', {})
-                        .then(({data}) => {
-                            this.dataBrand  = data;
-                            resolve();
-                        }).catch(error => reject(error))
-                })
-
-            },
-
-            GetProduct: function () {
-                return new Promise((resolve, reject) => {
-                    axios.get(' http://localhost:3000/product', {})
+                    axios.get(' http://localhost:3000/category/3', {})
                         .then(({data}) => {
                             // console.log(data)
-                            this.dataProduct = data;
-                            // console.log(this.dataProduct)
+                            this.titleFruidProduct = data.name;
+                            console.log(this.titleFruidProduct)
                             resolve();
                         }).catch(error => reject(error))
                 })
-            }
-        },
-        created() {
-            this.GetProduct();
-            this.GetBrand();
+            },
+        GetProduct: function () {
+            return new Promise((resolve, reject) => {
+                axios.get(' http://localhost:3000/product/?category=3', {})
+                    .then(({data}) => {
+                        // console.log(data)
+                        this.fruidProduct = data;
+                        // console.log(this.dataProduct)
+                        resolve();
+                    }).catch(error => reject(error))
+            })
         }
+    },
+    created()
+    {
+        this.GetProduct();
+        this.GetCategory();
+    }
     }
 </script>
 

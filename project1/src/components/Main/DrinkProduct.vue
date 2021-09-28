@@ -8,7 +8,7 @@
                         <div class="col-md-12 col-sm-12 col-xs-12 box-title__title">
                             <div class="row">
                                 <div class="text-reset text-decoration-none">
-                                    <h2><strong>Sản phẩm nổi bật nhất</strong></h2>
+                                    <h2><strong>Hoa quả nhiệt đới</strong></h2>
                                 </div>
                             </div>
                         </div>
@@ -17,23 +17,41 @@
                     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
                         <div class="d-flex flex-column flex-shrink-0 p-3 bg-light filter">
-                            <a href="/"
-                               class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
                                 <span class="fs-4">THƯƠNG HIỆU</span>
                             </a>
                             <hr>
-                            <ul class="nav nav-pills flex-column mb-auto" v-for="(brand) in dataBrand" :key="brand.id">
-                                <li class="nav-item" >
+                            <ul class="nav nav-pills flex-column mb-auto">
+                                <li class="nav-item">
                                     <a href="#" class="nav-link  link-dark" aria-current="page">
-                                        {{brand.name}}
+                                        MeatDeli
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        FEDDY
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        LENGER
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        VIMEX
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link link-dark">
+                                        SOVI
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9 product ">
                             <nav class="col-md-4 col-sm-4 col-xs-4"
-                                 v-for="(product) in dataProduct"
+                                 v-for="(product) in meatProduct"
                                  :key="product.id"
                                  :id="product.id"
                                  @click="productOnclick(product.id)">
@@ -45,8 +63,7 @@
                                             <p class="card-price">{{product.price}} đ</p>
                                             <div class="d-flex justify-content-between align-items-center">
                                                 <div class="btn-group">
-                                                    <button type="button"
-                                                            class="btn btn-sm btn-outline-secondary addcart">
+                                                    <button type="button" class="btn btn-sm btn-outline-secondary addcart">
                                                         Thêm vào giỏ hàng
                                                     </button>
                                                 </div>
@@ -78,9 +95,8 @@
 <script>
     import AppLayout from "@/components/layouts/AppLayout";
     import axios from "axios";
-
     export default {
-        name: "ListProduct",
+        name: "DrinkProduct",
         components: {AppLayout},
         props: {
             listproduct: {
@@ -90,9 +106,7 @@
         data() {
 
             return {
-                dataBrand: [],
-                dataProduct: [],
-                id: this.$route.params.id,
+                meatProduct: [],
             }
         },
         methods: {
@@ -100,23 +114,14 @@
                 this.$router.push({path: `/product/${id}`, params: {id: id}});
 
             },
-            GetBrand: function () {
-                return new Promise((resolve, reject) => {
-                    axios.get(' http://localhost:3000/brand', {})
-                        .then(({data}) => {
-                            this.dataBrand  = data;
-                            resolve();
-                        }).catch(error => reject(error))
-                })
 
-            },
 
             GetProduct: function () {
                 return new Promise((resolve, reject) => {
-                    axios.get(' http://localhost:3000/product', {})
+                    axios.get(' http://localhost:3000/product/?category=2', {})
                         .then(({data}) => {
                             // console.log(data)
-                            this.dataProduct = data;
+                            this.meatProduct = data;
                             // console.log(this.dataProduct)
                             resolve();
                         }).catch(error => reject(error))
@@ -125,21 +130,19 @@
         },
         created() {
             this.GetProduct();
-            this.GetBrand();
         }
     }
 </script>
 
 <style scoped>
     nav li:hover,
-    nav li:active {
+    nav li:active{
         text-decoration: none;
         transition: box-shadow .3s;
-        box-shadow: 0 0 11px rgba(33, 33, 33, .2);
-        color: white;
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+        color: white ;
     }
-
-    li.nav-item::marker {
+    li.nav-item::marker{
         list-style-type: none !important;
         color: white;
     }
