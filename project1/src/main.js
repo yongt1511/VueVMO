@@ -2,9 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import ('./assets/css/app.css')
 import {routes} from "@/routes";
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import ('./components/User/validation')
-Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 
 Vue.config.productionTip = false

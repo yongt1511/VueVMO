@@ -1,8 +1,6 @@
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const password = document.getElementById('password');
-const repassword = document.getElementById('re-password');
-const phonenumber = document.getElementById('phone-number');
 
 function setErrorFor(input, message) {
     const formControl = input.parentElement;
@@ -21,8 +19,6 @@ function setSuccessFor(input) {
 function checkInput() {
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
-    const repasswordValue = repassword.value.trim();
-    const phonenumberValue = phonenumber.value.trim();
 
 
     if (usernameValue === '') {
@@ -34,18 +30,6 @@ function checkInput() {
         setErrorFor(password, 'Mật khẩu không được để trống');
     } else {
         setSuccessFor(password);
-    }
-    if (repasswordValue === '') {
-        setErrorFor(repassword, 'Mật khẩu không được để trống');
-    } else if (repasswordValue != passwordValue) {
-        setErrorFor(repassword, 'Mật khẩu không trùng khớp');
-    } else {
-        setSuccessFor(repassword);
-    }
-    if (phonenumberValue === '') {
-        setErrorFor(phonenumber, 'Số điện thoại không được để trống ');
-    } else {
-        setSuccessFor(phonenumber);
     }
 }
 

@@ -117,7 +117,7 @@
                         .then(({data}) => {
                             // console.log(data)
                             this.dataProduct = data;
-                            // console.log(this.dataProduct)
+                            console.log(this.dataProduct)
                             resolve();
                         }).catch(error => reject(error))
                 })
