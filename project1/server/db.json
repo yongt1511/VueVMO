@@ -50,7 +50,6 @@
       "detail": "Cam Úc có chứa nhiều Vitamin C, có tác dụng hồi phục sức khỏe nhanh, tốt cho da, chống lão hóa, tốt cho người ốm.\n\nĂn cam Úc thường xuyên sẽ giúp bảo vệ bạn khỏi mắc các bệnh truyền nhiễm do virus, giảm đáng kể nguy cơ mắc bệnh sỏi thận. Nếu bạn muốn tránh lượng calo dư thừa, hãy thêm cam Úc vào chế độ dinh dưỡng hằng ngày của mình.",
       "image": "https://cdn-crownx.winmart.vn/images/prod/162985899484210628789.jpg"
     }
-
   ],
   "category": [
     {
@@ -86,6 +85,54 @@
     {
       "id": 5,
       "name": "SOVI"
+    }
+  ],
+  "user": [
+    {
+      "name": "yongt1511@gmail.com",
+      "password": "123",
+      "phonenumber": "0396087048",
+      "id": 1
+    },
+    {
+      "name": "yongt15111@gmail.com",
+      "password": "1234",
+      "phonenumber": "0396087048",
+      "id": 2
+    }
+  ],
+  "order": [
+    {
+      "quantity": 1,
+      "name": "Thịt đùi heo Meat Deli 400g",
+      "price": 40000,
+      "image": "https://lh3.googleusercontent.com/ABPyKXlxSkXT1-OrrTMME-4d-HqJzgpXw0w-LjjLInCS_wiuu8sE5HrCfSD_Q_bkxzl1sOthDQlAXqiE5tY",
+      "product_id": 6,
+      "id": 1
+    },
+    {
+      "quantity": "3",
+      "name": "Thịt đùi heo Meat Deli 400g",
+      "price": 40000,
+      "image": "https://lh3.googleusercontent.com/ABPyKXlxSkXT1-OrrTMME-4d-HqJzgpXw0w-LjjLInCS_wiuu8sE5HrCfSD_Q_bkxzl1sOthDQlAXqiE5tY",
+      "product_id": 6,
+      "id": 2
+    },
+    {
+      "quantity": 1,
+      "name": "Thịt đùi heo Meat Deli 400g",
+      "price": 40000,
+      "image": "https://lh3.googleusercontent.com/ABPyKXlxSkXT1-OrrTMME-4d-HqJzgpXw0w-LjjLInCS_wiuu8sE5HrCfSD_Q_bkxzl1sOthDQlAXqiE5tY",
+      "product_id": 6,
+      "id": 3
+    },
+    {
+      "quantity": 1,
+      "name": "Bánh mỳ Paket Bảo Ngọc gói 108g",
+      "price": 10500,
+      "image": "https://cdn-crownx.winmart.vn/images/prod/162428572953810055993-G1-Bap-cai-tom-DL-L1-MT.jpg",
+      "product_id": 3,
+      "id": 4
     }
   ]
 }
