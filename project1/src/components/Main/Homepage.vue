@@ -2,7 +2,7 @@
     <AppLayout>
         <div class="album py-5 bg-light">
             <div class="container ">
-                <div class="hotproduct">
+                <div class="hotproduct">c
                     <div class="col-md-12 col-sm-12 col-xs-12 bg-white border-radius shadow-sm">
                         <div class="col-md-12 col-sm-12 col-xs-12 box-title__title">
                             <div class="row">

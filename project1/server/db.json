@@ -2,7 +2,10 @@
   "product": [
     {
       "id": 1,
-      "category": 1,
+      "category":{
+        "id": 1,
+        "name": "Thịt-Trứng-Rau củ",
+      },
       "brand": "MeatDeli",
       "name": "Thịt đùi heo Meat Deli 400g",
       "status": true,
@@ -12,7 +15,10 @@
     },
     {
       "id": 6,
-      "category": 1,
+      "category":{
+        "id": 1,
+        "name": "Thịt-Trứng-Rau củ"
+      },
       "brand": "MeatDeli",
       "name": "Thịt đùi heo Meat Deli 400g",
       "status": true,
@@ -22,9 +28,12 @@
     },
     {
       "id": 2,
-      "category": 2,
+      "category":{
+        "id": 2,
+        "name": "Các sản phẩm từ Sữa",
+      },
       "brand": "FEDDY",
-      "name": "Sữa tươi TH true Milk 4 hộp",
+      "name": "Sữa tươi TH true Milk 4 hộp"
       "status": true,
       "price": 20000,
       "detail": "Kết hợp sữa tươi sạch của trang trại TH cùng với trái cây tự nhiên được nhập khẩu từ các vùng nguyên liệu chất lượng cao giúp cung cấp vitamin và khoáng chất cần thiết cho cơ thể.\nThơm ngon đã khát:  Các nguyên liệu được phối trộn với công thức riêng biệt mang đến vị ngon và nguồn dưỡng chất hoàn toàn từ thiên nhiên.\nCông nghệ sản xuất hiện đại: Quy trình sản xuất khép kín trên dây chuyền hiện đại từ CHLB Đức, sử dụng công nghệ tiệt trùng giúp lưu giữ nhiều nhất dưỡng chất và hương vị cho sản phẩm.\nTrải nghiệm uống sảng khoái: Thiết kế cổ chai rộng mang đến trải nghiệm uống sảng khoái.\nNăng động hiện đại: Bao bì trẻ trung, năng động với dung tích 300 ml tiện lợi, phù hợp với xu hướng sử dụng “on-the-go” của cuộc sống hiện đại.\nKhông chất bảo quản",
@@ -32,7 +41,10 @@
     },
     {
       "id": 3,
-      "category": 2,
+      "category":{
+        "id": 3,
+        "name": "Bánh Kẹo-Đồ Ăn Vặt "
+      },
       "brand": "SEVI",
       "name": "Bánh mỳ Paket Bảo Ngọc gói 108g",
       "status": true,
@@ -42,7 +54,10 @@
     },
     {
       "id": 4,
-      "category": 3,
+      "category":{
+        "id": 4,
+        "name": "Hoa quả nhiệt đới"
+      },
       "brand": "VIMEX",
       "name": "Cam ruột vàng úc",
       "status": true,
